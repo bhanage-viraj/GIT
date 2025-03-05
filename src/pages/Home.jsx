@@ -7,14 +7,28 @@ import useGitHubUser from "../hooks/useGitHubUser";
 
 const Home = () => {
   const [username, setUsername] = useState("");
-  const { user, loading, error } = useGitHubUser(username);
+  const { user, repos, loading, error } = useGitHubUser(username);
 
   return (
     <div className="home">
+      {/* SearchBar to input GitHub username */}
       <SearchBar onSearch={setUsername} />
+
+      {/* Show loader while fetching data */}
       {loading && <Loader />}
-      {error && <ErrorMessage message={error.message} />}
-      {user && <UserCard user={user} />}
+
+      {/* Display error message if there's an error */}
+      {error && <ErrorMessage message={error} />}
+
+      {/* Display UserCard if user data is available */}
+      {user && <UserCard user={user} repos={repos} />}
+
+      {/* Show a message if no username is entered */}
+      {!username && (
+        <p className="instruction">
+          Enter a GitHub username to see their profile and repositories.
+        </p>
+      )}
     </div>
   );
 };
