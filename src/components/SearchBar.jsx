@@ -1,5 +1,6 @@
-// src/components/SearchBar.jsx
+// SearchBar.jsx - with improved UI
 import { useState } from "react";
+import "./SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
   const [username, setUsername] = useState("");
@@ -18,8 +19,11 @@ const SearchBar = ({ onSearch }) => {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+        aria-label="GitHub username"
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 };

@@ -1,0 +1,12 @@
+/* ErrorMessage.css */
+.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    font-weight: 500;
+    border-left: 4px solid #ef4444;
+  }

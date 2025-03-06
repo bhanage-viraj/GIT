@@ -1,0 +1,47 @@
+/* RecentSearches.css */
+.recent-searches {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f8fafc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recent-searches h3 {
+    font-size: 1rem;
+    color: #64748b;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .recent-searches ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .recent-searches li {
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .recent-searches li:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-1px);
+  }
+  
+  .recent-searches p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+  }

@@ -1,27 +1,30 @@
+/* App.css - Main application styles */
 .app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app h1 {
   text-align: center;
-  font-family: Arial, sans-serif;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.search-bar {
-  margin: 20px;
+
+.instruction {
+  text-align: center;
+  margin: 3rem 0;
+  color: #64748b;
+  font-size: 1.1rem;
 }
-input {
-  padding: 8px;
-  margin-right: 10px;
-}
-button {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-.user-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-top: 20px;
-}
-.loader {
-  margin-top: 20px;
-}
-.error {
-  color: red;
-  margin-top: 20px;
+
+/* Global focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
 }
