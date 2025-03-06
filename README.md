@@ -1,12 +1,64 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Git User Finder
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Git User Finder is a simple yet powerful application that allows users to search for GitHub profiles using their usernames. The app fetches and displays user details, including their bio, latest repositories, and other relevant information, using the GitHub API.
 
-## Expanding the ESLint configuration
+This project is powered by **Octokit**, a GitHub client library, to interact seamlessly with GitHub's API and retrieve user data efficiently.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+* 🔍 **Search GitHub Users** - Find any GitHub user by entering their username.
+* 📜 **User Details** - Displays the user's bio, location, followers, and following count.
+* 📂 **Latest Repositories** - Fetches and shows the latest repositories of the user.
+* ⭐ **Repository Stats** - Displays repository stars, forks, and language used.
+* 🎨 **User-Friendly UI** - Simple and intuitive interface.
+
+## Technologies Used
+
+* **React** - Frontend framework for building the UI.
+* **Vite** - Fast build tool for React applications.
+* **Octokit** - GitHub API client for fetching user data.
+* **GitHub API** - To retrieve user and repository information.
+
+## Installation
+
+To set up the project on your local machine, follow these steps:
+
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/yourusername/git-user-finder.git
+   cd git-user-finder
+   ```
+2. **Install Dependencies:**
+   ```
+   npm install
+   ```
+3. **Run the Application:**
+   ```
+   npm run dev
+   ```
+
+## Usage
+
+1. Enter a GitHub username in the search bar.
+2. Click the "Search" button.
+3. View user details, including their bio, repositories, and stats.
+
+## Example
+
+## API Usage
+
+This app uses the **GitHub API** via **Octokit** to fetch data. You might need a GitHub personal access token if you exceed the rate limit.
+
+Example API call:
+
+```
+import { Octokit } from "octokit";
+
+const octokit = new Octokit();
+octokit.request('GET /users/{username}', {
+  username: 'octocat'
+}).then(response => console.log(response.data));
+```
